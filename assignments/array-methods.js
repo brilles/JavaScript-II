@@ -86,8 +86,36 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-
+//return shirt size XS and id > 30
+let smallAndXSmall = runners.filter(k => k.shirt_size === "XS" && k.id > 30);
+console.log(smallAndXSmall);
 
 // Problem 2
+//return total of donations over 150
+let bigDonations = runners.filter(a => a.donation > 150);
+let totalBig = bigDonations.reduce(function (total, currentValue) {
+    return total + currentValue.donation;
+}, 0);
+console.log(totalBig);
 
 // Problem 3
+//return net amount of odd amout of donation and even indivdually to compare amount
+let oddDonations = runners.filter(g => g.donation % 2 !== 0);
+console.log(oddDonations);
+
+let evenDonations = runners.filter(u => u.donation % 2 === 0);
+console.log(evenDonations);
+
+let totalOdd = oddDonations.reduce(function(total, currentValue) {
+  return total + currentValue.donation;
+}, 0);
+
+let totalEven = evenDonations.reduce(function(total, currentValue) {
+  return total + currentValue.donation;
+}, 0);
+
+console.log(totalEven, totalOdd); 
+//my findings are that the total even amount of donations is greater than odd. This means that on average, when people donate even, they donate more then when people donate odd. Therefore to maximize donations you could restrict donations to only even amounts, which ,"all else equal", would increase donations.
+
+
+

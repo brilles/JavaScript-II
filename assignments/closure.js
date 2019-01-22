@@ -29,9 +29,9 @@ const counter = () => {
   console.log(count++);
 };
 
-counter();
-counter();
-counter();
+// counter();
+// counter();
+// counter();
 
 // Example usage: const newCounter = counter();
 // newCounter(); // 1

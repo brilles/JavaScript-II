@@ -1,6 +1,6 @@
 // Create a callback function and invoke the function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array.  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ["Pencil", "Notebook", "yo-yo", "Gum"];
 
 /* 
 
@@ -21,14 +21,13 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
-
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
   return cb(arr.length);
 }
 
 getLength(items, function(length) {
-  console.log(length)
+  console.log(length);
 });
 
 function last(arr, cb) {
@@ -37,9 +36,8 @@ function last(arr, cb) {
 }
 
 last(items, function(last) {
-  console.log(last)
+  console.log(last);
 });
-
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
@@ -47,8 +45,8 @@ function sumNums(x, y, cb) {
 }
 
 sumNums(2, 4, function(add) {
-  console.log(add)
-}); 
+  console.log(add);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
@@ -56,7 +54,7 @@ function multiplyNums(x, y, cb) {
 }
 
 multiplyNums(3, 3, function(multiply) {
-  console.log(multiply)
+  console.log(multiply);
 });
 
 function contains(item, list, cb) {
@@ -75,7 +73,7 @@ function contains(item, list, cb) {
 }
 
 contains("Gum", items, function(inside) {
-  console.log(inside)
+  console.log(inside);
 });
 
 /* STRETCH PROBLEM */
@@ -84,4 +82,7 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  return cb();
 }
+
+

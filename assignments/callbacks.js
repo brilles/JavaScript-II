@@ -63,9 +63,18 @@ function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
   return cb(list.includes(item));
+  // var ans = null;
+  // for (i of list) {
+  //   if(list[i] === item) {
+  //   var ans = true;
+  //   } else {
+  //     ans = false;
+  //   }
+  //   return cb(ans);
+  // }
 }
 
-contains("yo-yo", items, function(inside) {
+contains("Gum", items, function(inside) {
   console.log(inside)
 });
 

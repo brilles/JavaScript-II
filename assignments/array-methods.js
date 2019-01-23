@@ -517,4 +517,6 @@ let totalEven = evenDonations.reduce(function(total, currentValue) {
 }, 0);
 
 console.log(totalEven, totalOdd);
-//my findings are that the total even amount of donations is greater than odd. This means that on average, when people donate even, they donate more then when people donate odd. Therefore to maximize donations you could restrict donations to only even amounts, which ,"all else equal", would increase donations.
+console.log(totalEven/totalOdd);
+console.log(8500/7043);
+//my findings are that the total even amount of donations is greater than odd. This means that on average, when people donate even, they donate more then when people donate odd. Therefore to maximize donations you could restrict donations to only even amounts, which ,"all else equal", would increase donations by 21% (4250+4250=8500 => 8500/7043 = 121% of original ====> 21% more).

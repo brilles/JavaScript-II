@@ -1,11 +1,38 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function cook(steakTemp) {
+  //steakTemp must = rare or medium rare
+  const mySteakTemp = steakTemp;
+  console.log(`I'd like my steak cooked: ${mySteakTemp}.`)
 
+  function rare() {
+    const side = "beans"
+    console.log(`Here is your ${steakTemp} steak.`);
+
+    function sideDish() {
+      console.log(`With your ${steakTemp} steak, here is your side of ${side}.`);
+      //debugger;
+    }
+
+    sideDish();
+  }
+
+  rare();
+}
+
+cook("medium rare")
 
 // ==== Challenge 2: Create a counter function ====
+let count = 1;
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  console.log(count++);
 };
+
+// counter();
+// counter();
+// counter();
+
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
